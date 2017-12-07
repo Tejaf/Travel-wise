@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Quicksand');
+
+body,
+html {
+    height: 100vh;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+} 
+html {
+    background: #fff;
+}
+
+/* sections */
+.homepage,
+.about,
+.contact {
+    height: 100vh;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* header navigation */
+header {
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    /* background: rgba(255, 255, 255, 0.1);
+    background: #1a3d5d; */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 30px;
+    color: #fff;
+}
+
+.on {
+	background-color: rgba(26, 35, 126, 1);
+}
+
+.nav--item {
+    margin-left: 30px; 
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    color: #c4f0ff;
+    color: #E3F2FD;
+    transition: all .5s;
+}
+
+/* .nav--item:hover,
+.nav--item.active {
+    background: rgba(255, 255, 255, 0.2);;
+    color: #ccc;
+} */
+/********** sections  **********/
+
+/* homepage */
+
+.homepage {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/000/131/511/non_2x/dotted-world-map-vector.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+   
+}
+
+.homepage::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    /* background-image: linear-gradient( #1a3d5d,#1a3d5d);
+    background-image: linear-gradient(45deg, #306eff, #157d3c); */
+    background-image: linear-gradient(45deg, rgba(179, 136, 255, 0.9), rgba(26, 35, 126, 0.9) 80%);
+}
+
+.home-container {
+    padding-top: 120px;
+    margin-left: 100px;
+}
+.home-container h1 {
+    font-size: 8rem;
+    text-transform: capitalize;
+    /* font-weight: 400 */
+}
+
+.home-container p {
+    font-size: 1.5rem;
+    margin-bottom: 40px; 
+}
+
+.home-container p,
+.home-container button {
+    margin-left: 10px
+}
+.home-container button {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: #ddd;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.home-container button:first-of-type {
+    margin-right: 20px;
+}
+
+.homepage button {
+    font-family: "Cinzel", sans-serif;
+    transition: all .4s;
+}
+
+.homepage button:hover {
+    background: rgb(179, 136, 255);
+}
+
+/*  about  */
+.about {
+    padding-top: 16vh;
+    
+}
+
+.nav--items {transition: all 0.8s;}
+.nav--items a:hover {opacity: 0.7;}
+
+.about h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about h1,
+.booking--form h3,
+.contact--form h3 {
+    font-family: "Cinzel", sans-serif;
+    color: rgba(26, 35, 126, 0.9);
+}
+
+.about-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+   background: #1a3d5d;
+   background: rgb(246, 246, 246);
+}
+
+.about--sub-section {
+    height: 80vh;
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+    color: rgba(0, 0, 0, 0.7)
+}
+
+.about--sub-section h3 {
+    padding: 20px 0;
+}
+
+.about--sub-section:not(:last-of-type) {
+    border-right: 1px solid rgba(26, 35, 126, 0.1)
+}
+
+.icon .fa {
+    font-size: 9rem;
+    color: #c4f0ff;
+    margin-bottom: 10px;
+    color: rgba(26, 35, 126, 1);
+}
+
+.about--sub-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+.about--sub-section p {
+    text-align: center;
+    font-size: 0.9rem;
+    padding-bottom: 20px;
+}
+/*  contact  */
+
+.contact {
+    padding-top: 8vh;
+    /* padding: 80px 0; */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(248, 253, 255)
+}
+
+.booking--form {
+    width: 60%
+}
+.contact--form {
+    width: 40%
+}
+
+
+.booking--form h3,
+.booking--form form {
+    width: 60%;
+    margin: 0 auto;
+    padding: 0
+}
+.contact--form textarea {
+    width: 100%;
+}
+
+.contact h3 {
+    font-size: 2.5rem;
+    padding: 30px 0;
+    color: #1a3d5d;
+}
+
+.form {
+    color: #aaa
+}
+
+.form input:not([type=radio]):not([type=checkbox]) {
+    width: 100%;
+}
+
+.extra-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.form input,
+.contact--form textarea {
+    padding: 10px;
+    background: #F0F2F5;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+.check--date {
+    display: flex;
+    margin-top: 10px;
+}
+.check--date h4 {
+    margin-bottom: 10px;
+}
+
+
+.checkin {
+    margin-right: 10px;
+}
+
+
+.booking--form {
+    width: 60%;
+}
+
+.comfort-options {
+    display: flex;
+    justify-content: space-between
+}
+
+.tmRadio p {
+    margin-bottom: 10px;
+}
+
+.booking--form button,
+.contact--form button {
+    display: block;
+    padding: 10px 15px;
+    color: rgba(26, 35, 126, 1);
+    background: #fff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 20px 0;
+    width: 100%;
+    border: 1px solid rgba(26, 35, 126, 1);
+    transition: all .4s;
+    font-family: "Cinzel"
+}
+
+.booking--form button:hover,
+.contact--form button:hover {
+    background: rgba(26, 35, 126, 1);
+    color: #fff;
+    cursor: pointer;
+}
+
+.contact--form {
+}
+
+
+
+
+/* footer */
+
+.contact {
+    /* height: 80vh; */
+}
+/* .footer {
+    background: rgba(26, 35, 126, 1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 40px 0;
+}
+
+.footer nav a,
+.footer nav span {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    color: #E3F2FD;
+    padding: 5px 10px;
+}
+
+.footer nav a:last-of-type {
+    margin-right: 30px; 
+} */
+
+/* Footer */
+footer{
+	background: rgba(26, 35, 126, 1);
+	color: #ffffff;
+	padding: 40px 15px;
+}
+footer .fnav{ vertical-align: middle;}
+ul.footer-social li{
+	display: inline-block;
+	margin-right: 10px;
+}
+footer a {
+    color: #FCAC45;
+    
+}
+
+footer p{
+	font-size: 12px;
+	margin-top: 10px;
+}
+footer i.fa {
+	height: 30px;
+	width: 30px;
+	border: 2px solid #E3F2FD;
+	font-size: 20px;
+	padding: 4px 5px;
+	border-radius: 50%;
+	color: #E3F2FD;
+	transition: all 0.5s;
+}
+footer i.fa:hover{
+	background: #E3F2FD;
+	border-color: #E3F2FD;
+	color: rgba(26, 35, 126, 1);
+}
+
+/* date picker */
+
+.tmDatepicker {
+    
+    margin:0;
+    padding: 0;
+    position: relative;
+}
+
+
+.tmDatepicker:after {
+    content: '\f073';
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    font: normal normal 20px/20px 'FontAwesome';
+    color: #98a6b3;
+    z-index: 4;
+    cursor: text;
+}
