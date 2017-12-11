@@ -56,6 +56,7 @@ a {
 #menu-bar.navbar-default .navbar-nav > li > a:hover {
     border-bottom: 2px solid var(--secondaryColor) !important;
     border-radius: 0 !important;
+    outline: none;
 }
 
 .on {
