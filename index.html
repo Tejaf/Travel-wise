@@ -8,223 +8,271 @@
     <link rel="stylesheet" href="css/main.css">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"> 
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">    
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-
-
-<link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css'/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css'/>
 
     
 </head>
 <body>
-    <header class="header navbar ">
-        <div class="logo">
-            <a href="#">LOGO</a>
-        </div>
-        <nav class="nav--items">
-            <a href="#home" class="nav--item active page-scroll">home</a>
-            <a href="#about" class="nav--item page-scroll">about</a>
-            <a href="#contact" class="nav--item page-scroll">contact</a>
-        </nav>
-    </header>
-    <section class="homepage" id="home">
-        <div class="home-container">
-            <h1>Better<br>Business Travel</h1>
-            <p>Book a flight for your next trip. It's <b>fast</b> and <b>easy</b></p>
-            <button> <a href="#about" class="page-scroll"> Why choose us?</a></button>
-            <button> <a href="#contact" class="page-scroll">Book now!</a></button>
-        </div>
-    </section>
-    <section class="about" id="about">
-        <h1>Why choose us <b>?</b></h1>
-        <div class="about-container">
-
-        
-            <div class="about--sub-section col-1">
-                <div class="icon">
-                    <i class="fa fa-plane fa-2x icon-bg "></i>
-                </div>
-                
-                <h3>Travel</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-        
-            <div class="about--sub-section col-2">
-                <div class="icon">
-                    <i class="fa fa-dollar fa-2x icon-bg "></i>
-                </div>
-                <h3>Expense</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-                aliquip ex ea commodo consequat.</p>
-            </div>
-        
-        
-            <div class="about--sub-section col-3">
-                <div class="icon">
-                    <i class="fa fa-trophy fa-2x icon-bg "></i>
-                </div>
-                <h3>Viability</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-                aliquip ex ea commodo consequat.</p>
-            </div>
-        </div>
-       
-    </section>
-    <section class="contact" id="contact">
-        <div class="booking--form">
-                <h3>Booking Form</h3>
-                <form id="bookingForm" class="form">
-                    <div class="fl1">
-                        <div class="tmInput">
-                            <input name="Name" placeHolder="Name:" type="text" required>
-                        </div>
-
-                        <div class="tmInput">
-                            <input name="Email" placeHolder="Email:" type="text" required>
-                        </div>
-
-                        <div class="tmInput">
-                            <input name="Number" placeHolder="Phone number:" type="number">
-                        </div>
-        
-                        <div class="tmInput">
-                            <input name="Country" placeHolder="Country:" type="text" >
-                        </div>
-                       
-                    </div>
+    <!-- <header> -->
+            <header>
+                    <nav id="menu-bar" class="navbar navbar-default navbar-fixed-top">
+                        <div class="container">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav--items">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="index.html">
+                                    
+                                    <!-- <img src="img/logoT.png" alt="" class="logo" width="100"> -->
+                                </a>
+                            </div>
                     
-                    <div class="check--date">
-                            <div class="checkin">
-                                    <h4>Arrival:</h4>
-                                    <label class="tmDatepicker" >
-                                        <input type="text" name="Check-in" placeHolder='DD/MM/YYYY'  id="checkin">
-                                    </label>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="nav--items">
+                                <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#home" class="page-scroll ">Home</a></li>
+                                <li><a href="#about" class="page-scroll">About</a></li>
+                                <li><a href="#contact" class="page-scroll">Contact</a></li>
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                        </div><!-- /.container-fluid -->
+                    </nav>
+                </header>
+    
+    <!-- Home Page
+    ==========================================-->
+    <section class="homepage" id="home">
+        <div class="overlay">
+            <div class="content">
+                <h1>Better<br>Business Travel</h1>
+                <p>Book a flight for your next trip. It's <strong>fast</strong> and <strong>easy</strong></p>
+                <button> <a href="#about" class="page-scroll"> Why choose us?</a></button>
+                <button> <a href="#contact" class="page-scroll">Book now!</a></button>
+                <div><a href="#about" class="fa fa-angle-down page-scroll"></a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Page
+    ==========================================-->
+    <section class="about" id="about">
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="section-title text-center">
+                            <h1>Why choose us <b>?</b></h1>
+                    </div>
+                    <div class="about--sub-section">
+                        <div class=" col-1 col-md-4">
+                            <div class="icon">
+                                <i class="fa fa-plane icon-bg "></i>
                             </div>
                             
-                            <div class="checkout">
-                                    <h4>Departure:</h4>
-                                    <label class="tmDatepicker" >
-                                        <input type="text" name="Check-out" placeHolder='DD/MM/YYYY' id="checkout">
-                                    </label>
-                            </div>
+                            <h3>Travel</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                            nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
-        
-                  
-                    <div class="tmRadio">
-                        <p>Comfort</p>
-                        <div class="comfort-options">
-                            <div>
-                                <input name="Comfort" type="radio" id="tmRadio0" class="radio" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' checked/>
-                                <span>Economy</span>
+
+                     <div class=" col-2 col-md-4">
+                        <div class="icon">
+                            <i class="fa fa-dollar icon-bg "></i>
+                        </div>
+                        <h3>Expense</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                        aliquip ex ea commodo consequat.</p>
+                    </div>
+                
+                
+                    <div class=" col-3 col-md-4">
+                        <div class="icon">
+                            <i class="fa fa-trophy  icon-bg "></i>
+                        </div>
+                        <h3>Viability</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                        aliquip ex ea commodo consequat.</p>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section
+    ==========================================-->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="booking--form col-md-6">
+                    <h3>Booking Form</h3>
+                    <form id="bookingForm" class="form">
+                        <div class="fl1">
+                            <div class="tmInput">
+                                <input name="Name" placeHolder="* Name:" type="text" required>
                             </div>
-                            <div>
-                                <input name="Comfort" type="radio" id="tmRadio1" class="radio" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
-                                <span>Business Class</span>
+    
+                            <div class="tmInput">
+                                <input name="Email" placeHolder="* Email:" type="text" required>
                             </div>
-                            <div>
-                                <input name="Comfort" type="radio" id="tmRadio2" class="radio" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
-                                <span>First Class</span>
+    
+                            <div class="tmInput">
+                                <input name="Number" placeHolder="Phone number:" type="number">
+                            </div>
+            
+                            <div class="tmInput">
+                                <input name="Country" placeHolder="Country:" type="text" >
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="check--date">
+                            <div class="row">
+                                <div class="checkout col-md-6 col-sm-6 cols">
+                                        <h4>Departure:</h4>
+                                        <label class="tmDatepicker" >
+                                            <input type="text" name="Check-out" placeHolder='DD/MM/YYYY' id="checkout">
+                                        </label>
+                                </div>
+                                <div class="checkin col-md-6 col-sm-6 cols">
+                                        <h4>Arrival:</h4>
+                                        <label class="tmDatepicker" >
+                                            <input type="text" name="Check-in" placeHolder='DD/MM/YYYY'  id="checkin">
+                                        </label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="tmCheckbox">
-                        <input type="checkbox" name="check">
-                        <label for="check">Include Hotel?</label>
-                    </div>
-                    
-                    <div class="extra-info">
-                            <div class="fl1 fl2">
-                                    <em>Adults</em>
-                                    <select name="Adults" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5+</option>
-                                    </select>
-                            </div>
-                            <div>
-                                    <em>Rooms</em>
-                                    <select name="Rooms" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
-                                        <option>0</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3+</option>
-                                    </select>
-                            </div>
-                                <div class="fl1 fl2">
-                                    <em>Children</em>
-                                    <select name="Children" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
-                                        <option>0</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4+</option>
-                                    </select>
+            
+                        
+                        <div class="tmRadio">
+                            <h4>Comfort:</h4>
+                            <div class="comfort-options">
+                                <div class="row">
+                                    <div class="col-md-4 cols" >
+                                        <em>Economy</em>
+                                        <input name="Comfort" type="radio" id="tmRadio0" class="radio"  checked/>
+                                    </div>
+                                    <div class="col-md-4 cols">
+                                        <em>Business Class</em>
+                                        <input name="Comfort" type="radio" id="tmRadio1" class="radio"  />
+                                    </div>
+                                    <div class="col-md-4 cols">
+                                        <em>First Class</em>
+                                        <input name="Comfort" type="radio" id="tmRadio2" class="radio"  />
+                                    </div>
                                 </div>
-                    </div>
+                                </div>
+                        </div>
+    
+                        <div class="tmCheckbox">
+                            <input type="checkbox" name="check">
+                            <label for="check">Include Hotel?</label>
+                        </div>
+                        
+                        <div class="extra-info">
+                                <div class="fl1 fl2">
+                                        <em>Adults</em>
+                                        <select name="Adults" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5+</option>
+                                        </select>
+                                </div>
+                                <div>
+                                        <em>Rooms</em>
+                                        <select name="Rooms" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3+</option>
+                                        </select>
+                                </div>
+                                    <div class="fl1 fl2">
+                                        <em>Children</em>
+                                        <select name="Children" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4+</option>
+                                        </select>
+                                    </div>
+                            </div>
+                            <div class="booking-footer">
+                                    <button class="booking-btn">submit</button>
+                            </div>
+                        </form>
+                </div>
+                <div class="col-md-6 contact-details">
+                    <h3 class="text-center ">Contact Us</h3>
+                    <div class="contact-info address ">
+                        <div>
+                            <i class="fa fa-building-o fa-3x icon-bg "></i>
+                        </div>
+                        <p >16 Kofo Abayomi <br> Victoria Island, Lagos, Nigeria <br> </p>
+                    </div> 
+    
+                    <div class="contact-info phone">
+                        <div>
+                            <i class="fa fa-phone fa-3x icon-bg "></i>
+                        </div>
+                        <p >+234 (817) 846-4526 </p>
+                    </div> 
+    
+                    <div class="contact-info office-hour">
+                        <div>
+                            <i class="fa fa-clock-o fa-3x icon-bg "></i>
+                        </div>
+                        <p>Monday – Friday: 9AM – 6PM <br> Saturday - Sunday: Closed</p>
+                    </div> 
 
-                    <button class="btn">submit</button>
-                </form>
+                    <div class="contact-info office-hour">
+                        <div>
+                            <i class="fa fa-envelope-o fa-3x icon-bg "></i>
+                        </div>
+                        <p> info@travel-wise.com </p>
+                    </div> 
+                </div>
+            </div>
         </div>
-        <div class="contact--form">
-            <h3>Contact Us</h3>
-            <form class="form" >
-                <input type="text" placeholder="Name:">
-                <input type="email" placeholder="Email:">
-                <textarea name="" placeholder="Message" id="" cols="30" rows="10"></textarea>
-                <button class="btn">send</button>
-            </form>
-        </div>
-        
-
-            
-            
-           
-
-            <a href="#" class="btn" data-type="submit">Submit</a>
-        </form>
     </section>
     <footer class="footer">
-        <!-- <div>
-            <p></p>
-        </div>
-        <nav >
-            <a href="#home" class="page-scroll">home</a>
-            <span>|</span>
-            <a href="#about" class="page-scroll" >about</a>
-            <span>|</span>
-            <a href="#contact" class="page-scroll" >contact</a>
-        </nav> -->
-
         <div class="container">
                 <div class="pull-left fnav">
-                    <p>TRAVEL WISE &copy; 2017 ALL RIGHTS RESERVED | Coded and Designed by <a href="twitter.com.tejaafonja" target="_blank">s3nsei</a></p>
+                    <small>TRAVEL WISE &copy; 2017 ALL RIGHTS RESERVED | Coded and Designed by <a href="twitter.com.tejaafonja" target="_blank" class="hover">s3nsei</a></small>
                 </div>
                 <div class="pull-right fnav">
                     <ul class="footer-social">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                     </ul>
                 </div>
             </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
+
+
+

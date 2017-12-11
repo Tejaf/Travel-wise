@@ -1,250 +1,298 @@
-@import url('https://fonts.googleapis.com/css?family=Cinzel|Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+/* remove for production -- support issue */
+
+:root {
+    --primaryColor: rgba(26, 35, 126, 1) ;
+    --secondaryColor: #E3F2FD;
+    --darkColor: #130f30;
+    --transition: all .8s;
+}
+
 
 body,
 html {
-    height: 100vh;
-    width: 100%;
-    font-size: 16px;
-    font-family: 'Quicksand', sans-serif;
+    height: 100vh !important;
+    width: 100% !important      ;
+    font-size: 16px !important;
+    font-family: 'Quicksand', sans-serif !important;
 } 
+
 html {
     background: #fff;
 }
 
-/* sections */
-.homepage,
-.about,
-.contact {
-    height: 100vh;
-    width: 100%;
-}
+/*====================
+    Navigation BAR
+    ==================
+*/
 a {
-    text-decoration: none;
-    color: #fff;
+    color: #fff !important;
+    text-decoration: none !important;
 }
 
-/* header navigation */
-header {
-    width: 100%;
-    height: 8vh;
-    position: fixed;
-    top: 0;
-    z-index: 4;
-    /* background: rgba(255, 255, 255, 0.1);
-    background: #1a3d5d; */
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 0 30px;
-    color: #fff;
+#menu-bar {
+    transition: var(--transition);
+    padding-top: 20px;
+}
+
+#menu-bar.navbar-default {
+	background-color: rgba(248, 248, 248, 0);
+    border-color: rgba(231, 231, 231, 0);
+}
+
+
+#menu-bar.navbar-default .navbar-nav > li > a {
+    margin-left: 30px; 
+    padding: 0 !important;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all .5s;
+    color: var(--secondaryColor) !important;
+}
+#menu-bar.navbar-default .navbar-nav > li > a:hover {
+    border-bottom: 2px solid var(--secondaryColor) !important;
+    border-radius: 0 !important;
 }
 
 .on {
-	background-color: rgba(26, 35, 126, 1);
+    background-color: var(--primaryColor) !important;
+    padding-top: 20px !important
 }
 
-.nav--item {
-    margin-left: 30px; 
-    padding: 5px 10px;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 700;
-    color: #c4f0ff;
-    color: #E3F2FD;
-    transition: all .5s;
+.on a {
+    color: #fff !important;
 }
 
-/* .nav--item:hover,
-.nav--item.active {
-    background: rgba(255, 255, 255, 0.2);;
-    color: #ccc;
-} */
-/********** sections  **********/
+.navbar-toggle {
+	border-radius: 0;
+}
+    
 
-/* homepage */
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus {
+	background-color: var(--primaryColor);
+	border-color: var(--primaryColor);
+}
+    
 
-.homepage {
-    width: 100%;
-    position: relative;
-    z-index: 1;
+.navbar-default .navbar-toggle:hover >.icon-bar {
+	background-color: #fff;
+}
+
+.navbar-brand {
+    padding: 0 !important;
+    margin: 0 !important;
+    color: #fff !important
+}
+
+    
+
+/*====================
+   SECTIONS
+    ==================
+*/
+
+/*====================
+    hOMEPAGE    
+    ==================
+*/
+
+#home{
+    width: 100%;    
     background-image: url("https://static.vecteezy.com/system/resources/previews/000/131/511/non_2x/dotted-world-map-vector.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-   
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	color: var(--secondaryColor);
 }
 
-.homepage::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    /* background-image: linear-gradient( #1a3d5d,#1a3d5d);
-    background-image: linear-gradient(45deg, #306eff, #157d3c); */
+#home .overlay{
+	height: 750px;
     background-image: linear-gradient(45deg, rgba(179, 136, 255, 0.9), rgba(26, 35, 126, 0.9) 80%);
+	background-attachment: fixed;
 }
 
-.home-container {
+
+.content {
+    position: relative;
     padding-top: 120px;
     margin-left: 100px;
+    color: #fff;
 }
-.home-container h1 {
+
+.content h1 {
     font-size: 8rem;
     text-transform: capitalize;
-    /* font-weight: 400 */
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: normal;
 }
 
-.home-container p {
+.content p {
     font-size: 1.5rem;
-    margin-bottom: 40px; 
+    margin-bottom: 30px; 
 }
 
-.home-container p,
-.home-container button {
+.content p,
+.content button {
     margin-left: 10px
 }
-.home-container button {
+
+.content button {
     padding: 10px 15px;
     font-size: 1.2rem;
     border: none;
     border-radius: 5px;
     outline: none;
-    color: #ddd;
+    text-transform: uppercase;
     font-weight: 700;
     background: rgba(255, 255, 255, 0.2);
     cursor: pointer;
+    transition: var(--transition);
+
 }
 
-.home-container button:first-of-type {
+.content button:first-of-type {
     margin-right: 20px;
 }
 
-.homepage button {
-    font-family: "Cinzel", sans-serif;
-    transition: all .4s;
+.content button:hover {
+    background: var(--primaryColor);
+    color: #fff !important;
+    transition: var(--transition);
 }
 
-.homepage button:hover {
-    background: rgb(179, 136, 255);
+.content div {
+    margin: 0 auto;
+    width: 0;
 }
 
-/*  about  */
-.about {
-    padding-top: 16vh;
+a.fa.fa-angle-down {
+	padding: 10px 15px;
+	color: #fff;
+	border: 2px solid var(--secondaryColor);
+	border-radius: 50%;
+	font-size: 24px;
+    margin-top: 70px;
+    outline: none;
+	transition: var(--transition);
+}
+a.fa.fa-angle-down:hover{
+	background: var(--primaryColor);
+	color: #fff;
+	border: 2px solid var(--primaryColor);
+}
+
+
+/*====================
+    ABOUT
+    ==================
+*/
+
+
+
+.about .section-title h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 50px;
+    text-transform: capitalize;
+    color: var(--primaryColor);
+}
+
+
+.about .container {
+    padding: 80px 0;
+    width: 100%;
+    background: rgb(246, 246, 246);
+    overflow: hidden;
+    text-align: center;
+    padding-left: 20px;
     
 }
 
-.nav--items {transition: all 0.8s;}
-.nav--items a:hover {opacity: 0.7;}
-
-.about h1 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 30px;
+.container .row {
+    color: var(--darkColor);
+    width: 90%;
+    margin: 0 auto;
 }
 
-.about h1,
-.booking--form h3,
-.contact--form h3 {
-    font-family: "Cinzel", sans-serif;
-    color: rgba(26, 35, 126, 0.9);
-}
-
-.about-container {
-    display: flex;
-    width: 100%;
-    align-items: center;
-   background: #1a3d5d;
-   background: rgb(246, 246, 246);
-}
 
 .about--sub-section {
-    height: 80vh;
-    padding: 50px;
-    text-align: center;
-    color: #fff;
-    color: rgba(0, 0, 0, 0.7)
-}
-
-.about--sub-section h3 {
-    padding: 20px 0;
-}
-
-.about--sub-section:not(:last-of-type) {
-    border-right: 1px solid rgba(26, 35, 126, 0.1)
+    padding-top: 30px;
 }
 
 .icon .fa {
     font-size: 9rem;
-    color: #c4f0ff;
-    margin-bottom: 10px;
-    color: rgba(26, 35, 126, 1);
+    color: var(--primaryColor);
 }
 
 .about--sub-section h3 {
     font-size: 1.8rem;
+    padding: 20px 0;
+}
+
+.icon .fa,
+.about--sub-section h3 {
     margin-bottom: 10px;
 }
+
 .about--sub-section p {
-    text-align: center;
+    padding-bottom: 40px;
     font-size: 0.9rem;
-    padding-bottom: 20px;
 }
-/*  contact  */
+
+
+/*====================
+    CONTACT
+    ==================
+*/
 
 .contact {
-    padding-top: 8vh;
-    /* padding: 80px 0; */
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    background: rgb(248, 253, 255)
+    background: rgb(248, 253, 255);
+    padding: 80px 0;
 }
 
-.booking--form {
-    width: 60%
+.contact .container {
+    padding: 0 !important;
 }
-.contact--form {
-    width: 40%
-}
-
 
 .booking--form h3,
+.contact-details h3,
 .booking--form form {
-    width: 60%;
     margin: 0 auto;
     padding: 0
 }
-.contact--form textarea {
-    width: 100%;
-}
 
 .contact h3 {
-    font-size: 2.5rem;
-    padding: 30px 0;
-    color: #1a3d5d;
+    font-size: 3rem;
+    padding-bottom: 40px;
+    color: var(--primaryColor);
 }
 
-.form {
-    color: #aaa
+.booking--form .form {
+    color: var(--darkColor)
 }
 
-.form input:not([type=radio]):not([type=checkbox]) {
+.booking--form .form input:not([type=radio]):not([type=checkbox]) {
     width: 100%;
 }
 
-.extra-info {
+.booking--form .extra-info {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
 }
 
-.form input,
-.contact--form textarea {
+.booking--form .extra-info select {
+    cursor: pointer;
+}
+
+.booking--form .form input {
     padding: 10px;
     background: #F0F2F5;
     border: none;
@@ -252,130 +300,112 @@ header {
     margin-bottom: 10px;
     font-size: 1rem;
 }
-.check--date {
-    display: flex;
-    margin-top: 10px;
+
+.check--date .row,
+.comfort-options .row {
+    width: 100% !important;
 }
-.check--date h4 {
+
+.cols {
+    padding: 0 !important;
+}
+
+.booking--form .comfort-options {
     margin-bottom: 10px;
 }
 
-
-.checkin {
-    margin-right: 10px;
+em {
+    margin-right: 5px;
 }
 
-
-.booking--form {
-    width: 60%;
+.booking--form input[type=radio] {
+    display: inline
 }
 
-.comfort-options {
-    display: flex;
-    justify-content: space-between
+.booking-footer {
+    text-align: center;
 }
 
-.tmRadio p {
-    margin-bottom: 10px;
-}
-
-.booking--form button,
-.contact--form button {
-    display: block;
+.booking--form button {
+    display: inline-block;
+    background: var(--primaryColor);
+    color: #fff;
+    line-height: 1;
     padding: 10px 15px;
-    color: rgba(26, 35, 126, 1);
-    background: #fff;
+    font-size: 1.4rem;
     outline: none;
     border: none;
     border-radius: 5px;
     text-transform: uppercase;
-    font-weight: 700;
-    margin: 20px 0;
-    width: 100%;
-    border: 1px solid rgba(26, 35, 126, 1);
-    transition: all .4s;
-    font-family: "Cinzel"
-}
-
-.booking--form button:hover,
-.contact--form button:hover {
-    background: rgba(26, 35, 126, 1);
-    color: #fff;
+    margin: 40px 0 20px;
     cursor: pointer;
+    transition: var(--transition);
 }
 
-.contact--form {
+.booking--form button:hover {
+   box-shadow: 0 0 5px 0 var(--primaryColor);
 }
 
-
-
-
-/* footer */
-
-.contact {
-    /* height: 80vh; */
-}
-/* .footer {
-    background: rgba(26, 35, 126, 1);
+.contact-info {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 40px 0;
+    margin-bottom: 30px;
+    margin-left: 25%;
 }
 
-.footer nav a,
-.footer nav span {
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 700;
-    color: #E3F2FD;
-    padding: 5px 10px;
+.contact-info p {
+    margin-left: 30px;
+    align-self: flex-end;
+    color: var(--primaryColor);
 }
 
-.footer nav a:last-of-type {
-    margin-right: 30px; 
-} */
 
-/* Footer */
+.icon-bg {
+    color: var(--primaryColor);
+}
+
+/*====================
+    FOOTER
+    ==================
+*/
 footer{
 	background: rgba(26, 35, 126, 1);
 	color: #ffffff;
-	padding: 40px 15px;
+	padding: 30px 15px 10px;
 }
+
 footer .fnav{ vertical-align: middle;}
+
 ul.footer-social li{
 	display: inline-block;
 	margin-right: 10px;
 }
-footer a {
-    color: #FCAC45;
-    
+
+footer .hover:hover {
+    border-bottom: 2px solid var(--secondaryColor) !important;
 }
 
-footer p{
-	font-size: 12px;
-	margin-top: 10px;
-}
+
 footer i.fa {
-	height: 30px;
-	width: 30px;
-	border: 2px solid #E3F2FD;
+	height: 35px;
+	width: 35px;
+	border: 2px solid var(--secondaryColor);
 	font-size: 20px;
-	padding: 4px 5px;
+	padding: 5px 5px;
 	border-radius: 50%;
-	color: #E3F2FD;
-	transition: all 0.5s;
+	color: var(--secondaryColor);
+    transition: var(--transition);
+    text-align: center;
 }
-footer i.fa:hover{
-	background: #E3F2FD;
-	border-color: #E3F2FD;
-	color: rgba(26, 35, 126, 1);
+
+footer i.fa:hover {
+	background: var(--secondaryColor);
+	border-color: var(--secondaryColor);
+	color: var(--primaryColor);
 }
 
 /* date picker */
 
 .tmDatepicker {
-    
     margin:0;
     padding: 0;
     position: relative;
@@ -385,7 +415,7 @@ footer i.fa:hover{
 .tmDatepicker:after {
     content: '\f073';
     position: absolute;
-    bottom: 0;
+    top: 10px;
     right: 5px;
     font: normal normal 20px/20px 'FontAwesome';
     color: #98a6b3;
