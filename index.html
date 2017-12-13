@@ -4,19 +4,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Travel Site</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">    
+    
     <!-- Bootstrap  -->
     <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 
     <!-- JQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css'/>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
 
     
 </head>
@@ -60,8 +63,8 @@
                 <p>Book a flight for your next trip. It's <strong>fast</strong> and <strong>easy</strong></p>
                 <button> <a href="#about" class="page-scroll"> Why choose us?</a></button>
                 <button> <a href="#contact" class="page-scroll">Book now!</a></button>
-                <div><a href="#about" class="fa fa-angle-down page-scroll"></a></div>
             </div>
+            <div class="arrow-down"><a href="#about" class="fa fa-angle-down page-scroll"></a></div>
         </div>
     </section>
 
@@ -75,7 +78,7 @@
                             <h1>Why choose us <b>?</b></h1>
                     </div>
                     <div class="about--sub-section">
-                        <div class=" col-1 col-md-4">
+                        <div class=" col-1 col-md-4 col-sm-6">
                             <div class="icon">
                                 <i class="fa fa-plane icon-bg "></i>
                             </div>
@@ -87,7 +90,7 @@
                             nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
 
-                     <div class=" col-2 col-md-4">
+                     <div class=" col-2 col-md-4 col-sm-6">
                         <div class="icon">
                             <i class="fa fa-dollar icon-bg "></i>
                         </div>
@@ -99,7 +102,7 @@
                     </div>
                 
                 
-                    <div class=" col-3 col-md-4">
+                    <div class=" col-3 col-md-4 col-sm-6">
                         <div class="icon">
                             <i class="fa fa-trophy  icon-bg "></i>
                         </div>
@@ -146,13 +149,13 @@
                         <div class="check--date">
                             <div class="row">
                                 <div class="checkout col-md-6 col-sm-6 cols">
-                                        <h4>Departure:</h4>
+                                        <h4 class="text-muted">Departure:</h4>
                                         <label class="tmDatepicker" >
                                             <input type="text" name="Check-out" placeHolder='DD/MM/YYYY' id="checkout">
                                         </label>
                                 </div>
                                 <div class="checkin col-md-6 col-sm-6 cols">
-                                        <h4>Arrival:</h4>
+                                        <h4 class="text-muted">Arrival:</h4>
                                         <label class="tmDatepicker" >
                                             <input type="text" name="Check-in" placeHolder='DD/MM/YYYY'  id="checkin">
                                         </label>
@@ -162,19 +165,19 @@
             
                         
                         <div class="tmRadio">
-                            <h4>Comfort:</h4>
+                            <h4 class="text-muted"> Choose class:</h4>
                             <div class="comfort-options">
                                 <div class="row">
-                                    <div class="col-md-4 cols" >
-                                        <em>Economy</em>
+                                    <div class="col-md-4 col-xs-6  col-sm-4 cols" >
+                                        <p>Economy</p>
                                         <input name="Comfort" type="radio" id="tmRadio0" class="radio"  checked/>
                                     </div>
-                                    <div class="col-md-4 cols">
-                                        <em>Business Class</em>
+                                    <div class="col-md-4 col-xs-6 col-sm-4 cols">
+                                        <p>Business</p>
                                         <input name="Comfort" type="radio" id="tmRadio1" class="radio"  />
                                     </div>
-                                    <div class="col-md-4 cols">
-                                        <em>First Class</em>
+                                    <div class="col-md-4 col-xs-6 col-sm-4 cols">
+                                        <p>First</p>
                                         <input name="Comfort" type="radio" id="tmRadio2" class="radio"  />
                                     </div>
                                 </div>
@@ -187,8 +190,10 @@
                         </div>
                         
                         <div class="extra-info">
-                                <div class="fl1 fl2">
-                                        <em>Adults</em>
+                            <!-- <div class="container"> -->
+                                <div class="row">
+                                    <div class="col-md-4 col-xs-6 col-sm-4  cols">
+                                        <p>Adults</p>
                                         <select name="Adults" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
                                             <option>1</option>
                                             <option>2</option>
@@ -196,18 +201,18 @@
                                             <option>4</option>
                                             <option>5+</option>
                                         </select>
-                                </div>
-                                <div>
-                                        <em>Rooms</em>
+                                    </div>
+                                    <div class="col-md-4 col-xs-6  col-sm-4 cols">
+                                        <p>Rooms</p>
                                         <select name="Rooms" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
                                             <option>0</option>
                                             <option>1</option>
                                             <option>2</option>
                                             <option>3+</option>
                                         </select>
-                                </div>
-                                    <div class="fl1 fl2">
-                                        <em>Children</em>
+                                    </div>
+                                    <div class="col-md-4 col-xs-6  col-sm-4 cols">
+                                        <p>Children</p>
                                         <select name="Children" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
                                             <option>0</option>
                                             <option>1</option>
@@ -216,11 +221,15 @@
                                             <option>4+</option>
                                         </select>
                                     </div>
+                                <!-- </div> -->
+                                    
                             </div>
-                            <div class="booking-footer">
-                                    <button class="booking-btn">submit</button>
-                            </div>
-                        </form>
+                        </div>
+                            
+                        <div class="booking-footer">
+                                <button class="booking-btn">submit</button>
+                        </div>
+                    </form>
                 </div>
                 <div class="col-md-6 contact-details">
                     <h3 class="text-center ">Contact Us</h3>
@@ -245,7 +254,7 @@
                         <p>Monday – Friday: 9AM – 6PM <br> Saturday - Sunday: Closed</p>
                     </div> 
 
-                    <div class="contact-info office-hour">
+                    <div class="contact-info">
                         <div>
                             <i class="fa fa-envelope-o fa-3x icon-bg "></i>
                         </div>
@@ -270,6 +279,7 @@
                 </div>
             </div>
     </footer>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

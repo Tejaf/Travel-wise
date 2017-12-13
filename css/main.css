@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
-
 /* remove for production -- support issue */
 
 :root {
@@ -17,6 +15,10 @@ html {
     font-size: 16px !important;
     font-family: 'Quicksand', sans-serif !important;
 } 
+
+body {
+    overflow-x: hidden !important;
+}
 
 html {
     background: #fff;
@@ -43,6 +45,7 @@ a {
 }
 
 
+
 #menu-bar.navbar-default .navbar-nav > li > a {
     margin-left: 30px; 
     padding: 0 !important;
@@ -57,6 +60,7 @@ a {
     border-bottom: 2px solid var(--secondaryColor) !important;
     border-radius: 0 !important;
     outline: none;
+    color: #fff !important;
 }
 
 .on {
@@ -64,7 +68,10 @@ a {
     padding-top: 20px !important
 }
 
-.on a {
+
+
+#menu-bar.on .nav > li > a:hover,
+#menu-bar.on .nav > li > a:active {
     color: #fff !important;
 }
 
@@ -89,7 +96,6 @@ a {
     margin: 0 !important;
     color: #fff !important
 }
-
     
 
 /*====================
@@ -103,7 +109,8 @@ a {
 */
 
 #home{
-    width: 100%;    
+    width: 100%;  
+    height: 100vh;  
     background-image: url("https://static.vecteezy.com/system/resources/previews/000/131/511/non_2x/dotted-world-map-vector.jpg");
 	background-size: cover;
 	background-position: center;
@@ -113,7 +120,7 @@ a {
 }
 
 #home .overlay{
-	height: 750px;
+	height: 100vh;
     background-image: linear-gradient(45deg, rgba(179, 136, 255, 0.9), rgba(26, 35, 126, 0.9) 80%);
 	background-attachment: fixed;
 }
@@ -121,13 +128,13 @@ a {
 
 .content {
     position: relative;
-    padding-top: 120px;
-    margin-left: 100px;
+    padding-top: 10%;
+    padding-left: 8%;
     color: #fff;
 }
 
-.content h1 {
-    font-size: 8rem;
+.homepage .content h1 {
+    font-size: 100px;
     text-transform: capitalize;
     margin: 0;
     margin-bottom: 10px;
@@ -136,7 +143,6 @@ a {
 
 .content p {
     font-size: 1.5rem;
-    margin-bottom: 30px; 
 }
 
 .content p,
@@ -155,11 +161,12 @@ a {
     background: rgba(255, 255, 255, 0.2);
     cursor: pointer;
     transition: var(--transition);
+    margin-top: 40px;
 
 }
 
 .content button:first-of-type {
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 .content button:hover {
@@ -168,9 +175,9 @@ a {
     transition: var(--transition);
 }
 
-.content div {
+.arrow-down {
     margin: 0 auto;
-    width: 0;
+    width: 40px;
 }
 
 a.fa.fa-angle-down {
@@ -195,14 +202,13 @@ a.fa.fa-angle-down:hover{
     ==================
 */
 
-
-
 .about .section-title h1 {
     font-size: 3rem;
     text-align: center;
     padding-bottom: 50px;
     text-transform: capitalize;
     color: var(--primaryColor);
+    padding-bottom: 30px;
 }
 
 
@@ -228,7 +234,7 @@ a.fa.fa-angle-down:hover{
 }
 
 .icon .fa {
-    font-size: 9rem;
+    font-size: 100px;
     color: var(--primaryColor);
 }
 
@@ -237,10 +243,6 @@ a.fa.fa-angle-down:hover{
     padding: 20px 0;
 }
 
-.icon .fa,
-.about--sub-section h3 {
-    margin-bottom: 10px;
-}
 
 .about--sub-section p {
     padding-bottom: 40px;
@@ -284,12 +286,6 @@ a.fa.fa-angle-down:hover{
     width: 100%;
 }
 
-.booking--form .extra-info {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-}
-
 .booking--form .extra-info select {
     cursor: pointer;
 }
@@ -301,6 +297,15 @@ a.fa.fa-angle-down:hover{
     outline: none;
     margin-bottom: 10px;
     font-size: 1rem;
+}
+
+.extra-info {
+    margin-top:  10px;
+}
+.extra-info .row {
+    padding: 0 !important;
+    margin:  0 !important;
+   
 }
 
 .check--date .row,
@@ -316,7 +321,9 @@ a.fa.fa-angle-down:hover{
     margin-bottom: 10px;
 }
 
-em {
+.comfort-options p,
+.extra-info p {
+    display: inline;
     margin-right: 5px;
 }
 
@@ -344,6 +351,10 @@ em {
     transition: var(--transition);
 }
 
+select {
+    margin-bottom: 5px;
+}
+
 .booking--form button:hover {
    box-shadow: 0 0 5px 0 var(--primaryColor);
 }
@@ -356,7 +367,7 @@ em {
 
 .contact-info p {
     margin-left: 30px;
-    align-self: flex-end;
+    align-self: center;
     color: var(--primaryColor);
 }
 
@@ -369,7 +380,7 @@ em {
     FOOTER
     ==================
 */
-footer{
+footer {
 	background: rgba(26, 35, 126, 1);
 	color: #ffffff;
 	padding: 30px 15px 10px;
@@ -392,7 +403,7 @@ footer i.fa {
 	width: 35px;
 	border: 2px solid var(--secondaryColor);
 	font-size: 20px;
-	padding: 5px 5px;
+	padding: 5px;
 	border-radius: 50%;
 	color: var(--secondaryColor);
     transition: var(--transition);
@@ -424,3 +435,199 @@ footer i.fa:hover {
     z-index: 4;
     cursor: text;
 }
+
+
+/*===============
+    Samsung, Nexus,
+    Major phone screens
+==============*/
+
+@media only screen and (min-width : 320px) and (max-width : 768px) {
+   
+    #menu-bar.navbar-default {
+        background-color: rgba(26, 35, 126, 0.2) !important;
+        background:  rgba(179, 136, 255, 0.1) !important
+    }
+
+    #menu-bar.navbar-default .navbar-nav > li > a {
+        padding: 10px 0 !important;
+        font-size: 13px;
+    }
+
+    #menu-bar.navbar-default .navbar-nav > li > a:hover {
+        border-bottom: none !important;
+    }
+
+    #menu-bar.on {
+        background-color: var(--primaryColor) !important;
+    }
+
+    #menu-bar.on .nav > li > a:hover,
+    #menu-bar.on .nav > li > a:active {
+        color: #fff !important;
+    }
+
+    .homepage .content {
+        padding-top: 50%;
+    }
+
+    .homepage .content h1 {
+        font-size: 40px;
+    }
+
+    .homepage .content p {
+        font-size: 16px;
+        margin-left: 0;
+    }
+
+    .content button {
+        font-size:  14px;
+    }
+
+    .arrow-down .fa-angle-down {
+        font-size: 20px !important;
+        margin-top: 100px !important;
+    }
+
+    section .container {
+        padding-left: 0 !important;
+    }
+
+    .section-title h1 {
+        font-size: 26px !important;
+        text-transform: uppercase !important;
+    }
+
+    .about--sub-section {
+        padding: 0;
+    }
+    
+    .tmRadio h4 {
+        margin-bottom: 5px;
+    }
+
+    .contact h3 {
+        font-size: 26px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .contact .booking--form {
+        padding-bottom: 40px;
+    }
+
+    .booking-btn {
+        font-size: 16px !important;
+    }
+
+    .check--date input {
+        font-size: 12px;
+        width: 100%
+    }
+
+    optgroup {
+        font-size: 0;
+    }
+    select,
+    option {
+        outline: none;
+        font-size: 14px;
+    }
+
+    .contact-details {
+        padding: 0;
+        margin: 0  auto
+    }
+
+    .contact-info {
+        margin-left: 8%;
+        font-size: 14px;
+    }
+
+    .contact-info .fa {
+        font-size: 28px;
+    }
+
+    footer {
+        font-size: 11px;
+    }
+
+
+    footer i.fa {
+        height: 30px;
+        width: 30px;
+        font-size: 16px;
+    }
+
+}
+
+/*===============
+    IPhone-s
+==============*/
+
+@media screen and (max-width: 320px) {
+    .homepage .content button {
+        font-size: 12px;
+    }
+
+}
+
+/*===============
+    IPad 
+==============*/
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    #home,
+    #home .overlay {
+        height: 750px;
+    }
+
+    .homepage .content {
+        padding-top: 30%;
+    }
+
+    .homepage .content h1 {
+        font-size: 80px;
+    }
+
+    .homepage .content p {
+        font-size: 22px;
+    }
+
+    .content button {
+        font-size:  18px;
+    }
+
+    .arrow-down .fa-angle-down {
+        font-size: 22px !important;
+    }
+}
+
+/*===============
+    IPad Pro
+==============*/
+
+@media screen and (min-width: 1024px) and (max-width: 1224px){
+    
+        #home,
+        #home .overlay {
+            height: 850px;
+        }
+    
+        .homepage .content {
+            padding-top: 25%;
+        }
+    
+        .homepage .content h1 {
+            font-size: 80px;
+        }
+    
+        .homepage .content p {
+            font-size: 22px;
+        }
+    
+        .content button {
+            font-size:  18px;
+        }
+    }
