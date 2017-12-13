@@ -29,7 +29,6 @@ html {
     ==================
 */
 a {
-    color: #fff !important;
     text-decoration: none !important;
     outline: none !important;
 }
@@ -162,7 +161,10 @@ a {
     cursor: pointer;
     transition: var(--transition);
     margin-top: 40px;
+}
 
+.content button a {
+    color: #fff !important;
 }
 
 .content button:first-of-type {
@@ -436,6 +438,44 @@ footer i.fa:hover {
     cursor: text;
 }
 
+.ui-datepicker-header {
+    color: var(--primaryColor) !important;
+    background: transparent !important;
+    border: none !important;
+    font-size: 14px !important; 
+}
+
+.ui-datepicker-calendar {
+    background: var(--secondaryColor);
+}
+
+.ui-datepicker thead {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #bbb;
+  }
+
+  .ui-datepicker th {
+    text-transform: uppercase;
+    font-size: 6pt;
+    padding: 5px 0;
+    color: var(--darkColor)
+  }
+
+  .ui-datepicker td span, .ui-datepicker td a {
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+ .ui-datepicker td a {
+    color: var(--darkColor) !important;
+    background: transparent !important;
+    font-size: 14px; !important
+  }
+  
 
 /*===============
     Samsung, Nexus,
@@ -561,6 +601,17 @@ footer i.fa:hover {
 
 }
 
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-height : 560px) {
+    .homepage .content {
+        padding-top: 11%;
+    }
+    .arrow-down .fa-angle-down {
+        margin-top: 50px !important;
+    }
+}
+
+
 /*===============
     IPhone-s
 ==============*/
@@ -608,7 +659,7 @@ footer i.fa:hover {
     IPad Pro
 ==============*/
 
-@media screen and (min-width: 1024px) and (max-width: 1224px){
+@media screen and (min-width: 1024px) and (max-width: 1224px) {
     
         #home,
         #home .overlay {

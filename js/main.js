@@ -22,11 +22,13 @@ function main() {
         ======================================*/
         $(window).bind('scroll', function() {
             var navHeight = $(window).height() - 100;
+
             if ($(window).scrollTop() > navHeight) {
                 $('.navbar').addClass('on');
             } else {
                 $('.navbar').removeClass('on');
             }
+
         });
 
 
@@ -34,8 +36,17 @@ function main() {
         Date Picker
         ==================================*/
 
-        $('#checkin').datepicker();
-        $('#checkout').datepicker();
+        function datepicker() {
+            $('#checkin, #checkout').datepicker({
+                inline: true,
+                showOtherMonths: true,
+                dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+              });
+
+              $('#checkin').datepicker();
+              $('#checkout').datepicker();
+        }
+        datepicker()
     }())
 }
 

@@ -14,9 +14,9 @@
     
 
     <!-- JQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-    <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css'/>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
@@ -24,7 +24,6 @@
     
 </head>
 <body>
-    <!-- <header> -->
             <header>
                     <nav id="menu-bar" class="navbar navbar-default navbar-fixed-top">
                         <div class="container">
@@ -151,7 +150,7 @@
                                 <div class="checkout col-md-6 col-sm-6 cols">
                                         <h4 class="text-muted">Departure:</h4>
                                         <label class="tmDatepicker" >
-                                            <input type="text" name="Check-out" placeHolder='DD/MM/YYYY' id="checkout">
+                                            <input type="text" name="Check-out" data-role="date" placeHolder='DD/MM/YYYY' id="checkout">
                                         </label>
                                 </div>
                                 <div class="checkin col-md-6 col-sm-6 cols">
@@ -190,7 +189,6 @@
                         </div>
                         
                         <div class="extra-info">
-                            <!-- <div class="container"> -->
                                 <div class="row">
                                     <div class="col-md-4 col-xs-6 col-sm-4  cols">
                                         <p>Adults</p>
@@ -221,7 +219,6 @@
                                             <option>4+</option>
                                         </select>
                                     </div>
-                                <!-- </div> -->
                                     
                             </div>
                         </div>
@@ -279,7 +276,7 @@
                 </div>
             </div>
     </footer>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+    
     <script src="js/main.js"></script>
 </body>
 </html>
