@@ -4,6 +4,7 @@
     --primaryColor: rgba(26, 35, 126, 1) ;
     --secondaryColor: #E3F2FD;
     --darkColor: #130f30;
+    --complimentaryColor: #FFA500;
     --transition: all .8s;
 }
 
@@ -67,7 +68,9 @@ a {
     padding-top: 20px !important
 }
 
-
+#menu-bar.navbar-default .navbar-nav > li > a.active {
+    color: var(--complimentaryColor) !important;   
+}
 
 #menu-bar.on .nav > li > a:hover,
 #menu-bar.on .nav > li > a:active {
@@ -133,7 +136,7 @@ a {
 }
 
 .homepage .content h1 {
-    font-size: 100px;
+    font-size: 120px;
     text-transform: capitalize;
     margin: 0;
     margin-bottom: 10px;
@@ -173,7 +176,6 @@ a {
 
 .content button:hover {
     background: var(--primaryColor);
-    color: #fff !important;
     transition: var(--transition);
 }
 
@@ -185,18 +187,28 @@ a {
 a.fa.fa-angle-down {
 	padding: 10px 15px;
 	color: #fff;
-	border: 2px solid var(--secondaryColor);
+	/* border: 2px solid var(--secondaryColor); */
 	border-radius: 50%;
 	font-size: 24px;
-    margin-top: 70px;
+    margin-top: 35px;
     outline: none;
-	transition: var(--transition);
+    transition: var(--transition);
+    animation: bounce 2s infinite alternate;
 }
 a.fa.fa-angle-down:hover{
 	background: var(--primaryColor);
 	color: #fff;
 	border: 2px solid var(--primaryColor);
 }
+    /* animate */
+    @keyframes bounce {
+        from {
+        transform: translateY(-8px);
+        }
+        to {
+        transform: translateY(0px);
+        }
+    }
 
 
 /*====================
@@ -395,6 +407,9 @@ ul.footer-social li{
 	margin-right: 10px;
 }
 
+footer .hover {
+    color: var(--complimentaryColor) !important;
+}
 footer .hover:hover {
     border-bottom: 2px solid var(--secondaryColor) !important;
 }
@@ -485,8 +500,7 @@ footer i.fa:hover {
 @media only screen and (min-width : 320px) and (max-width : 768px) {
    
     #menu-bar.navbar-default {
-        background-color: rgba(26, 35, 126, 0.2) !important;
-        background:  rgba(179, 136, 255, 0.1) !important
+        background:  rgba(26, 35, 126, 1) !important
     }
 
     #menu-bar.navbar-default .navbar-nav > li > a {
@@ -512,7 +526,7 @@ footer i.fa:hover {
     }
 
     .homepage .content h1 {
-        font-size: 40px;
+        font-size: 50px;
     }
 
     .homepage .content p {
@@ -635,7 +649,7 @@ footer i.fa:hover {
     }
 
     .homepage .content {
-        padding-top: 30%;
+        padding-top: 15%;
     }
 
     .homepage .content h1 {
@@ -652,6 +666,7 @@ footer i.fa:hover {
 
     .arrow-down .fa-angle-down {
         font-size: 22px !important;
+        margin-top: 100px;
     }
 }
 
@@ -667,7 +682,7 @@ footer i.fa:hover {
         }
     
         .homepage .content {
-            padding-top: 25%;
+            padding-top: 15%;
         }
     
         .homepage .content h1 {
