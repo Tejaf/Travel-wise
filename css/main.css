@@ -500,7 +500,7 @@ footer i.fa:hover {
 @media only screen and (min-width : 320px) and (max-width : 768px) {
    
     #menu-bar.navbar-default {
-        background:  rgba(26, 35, 126, 1) !important
+        background:  rgba(26, 35, 126, 0.3) !important
     }
 
     #menu-bar.navbar-default .navbar-nav > li > a {
